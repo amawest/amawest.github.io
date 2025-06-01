@@ -5,8 +5,12 @@
     <meta name="image" property="og:image" content="https://i.ibb.co/XX4WLC2/preview.png">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="Amanda LaForest - AI/ML Engineer and Data Scientist" />
+    <meta name="author" content="Amanda LaForest" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Amanda LaForest - Portfolio" />
+    <meta property="og:description"
+        content="AI/ML Engineer and Data Scientist specializing in healthcare and national security" />
     <title>Amanda LaForest</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -17,6 +21,108 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        /* Profile image adjustments */
+        .img-profile {
+            max-width: 14rem !important;
+            max-height: 14rem !important;
+            border: 0.5rem solid rgba(255, 255, 255, 0.2);
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 2rem;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90vh;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .modal-caption {
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            padding: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -36,6 +142,7 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#volunteer">Volunteer</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#achievements">Achievements</a></li>
             </ul>
@@ -46,27 +153,42 @@
         <!-- About-->
         <section class="resume-section" id="about">
             <div class="resume-section-content">
-                <h1 class="mb-0">
+                <h1 class="mb-0>
                     Amanda
-                    <span class="text-primary">LaForest</span>
+                    <span class=" text-primary">Amanda LaForest</span>
                 </h1>
                 <div class="subheading mb-5">
                     Arvada, CO · (269) 953-3057 ·
                     <a href="mailto:amalaforest@gmail.com">amalaforest@gmail.com</a>
                 </div>
                 <p class="lead mb-5">
-                    Hi 👋 my name is Amanda and I'm a senior data scientist at Daybreak LLC.
+                    Hi! 👋 my name is Amanda (née West) and I'm a Lead AI/ML Engineer at Booz Allen Hamilton.<br><br>
 
-                    Within the field of data science, I'm most passionate about machine learning, big data, data
-                    visualization, and data storytelling.
+                    I specialize in machine learning, data engineering, and AI solutions with a focus on healthcare and
+                    national security.
+                    In my current role, I lead a team of data engineers and AI specialists within the FDA Data
+                    Modernization program,
+                    where I serve as a strategic AI advisor to executive leadership and oversee the professional growth
+                    of data science professionals.<br><br>
 
-                    Nice to meet you!</p>
+                    Previously at FDA, I led illegitimate product detection efforts within the Center for Devices and
+                    Radiological Health,
+                    where I developed machine learning models to strengthen U.S. healthcare supply chain resiliency. I'm
+                    a certified
+                    Databricks Generative AI Engineer and Data Engineer, combining technical expertise with a passion
+                    for mentorship
+                    and knowledge sharing.<br><br>
+
+                    I hold an M.S. in Data Science from the University of Virginia and a
+                    B.S. in Economics from the University of Michigan (go blue!). I'm passionate about using AI to
+                    improve lives and
+                    advance healthcare, while maintaining a strong commitment to ethical AI practices and collaborative
+                    innovation.
+                </p>
                 <div class="social-icons">
                     <a class="social-icon" href="https://github.com/amawest"><i class="fab fa-github"></i></a>
                     <a class="social-icon" href="https://www.linkedin.com/in/amalaforest/"><i
                             class="fab fa-linkedin-in"></i></a>
-                    <a class="social-icon" href="https://medium.com/@amalaforest"><i class="fab fa-medium"></i></a>
-                    <a class="social-icon" href="https://twitter.com/random_laforest"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </section>
@@ -76,53 +198,186 @@
             <div class="resume-section-content">
                 <h2 class="mb-5">Experience</h2>
 
+                <!-- Booz Allen Hamilton -->
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Lead AI/ML Engineer, Associate</h3>
+                        <div class="subheading mb-3">Booz Allen Hamilton</div>
+                        <p>
+                            Lead a team of data engineers, AI engineers, and data scientists within the FDA Data
+                            Modernization program.
+                            Serve as strategic AI advisor to executive leadership, delivering technical recommendations
+                            for enterprise-wide AI adoption.
+                            Oversee professional growth of six data science professionals in a managerial role and
+                            provide technical and professional mentorship.
+                        </p>
+                        <ul class="fa-ul mb-0">
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Led migration of enterprise-wide data warehousing modernization initiative processing
+                                70TB of FDA regulatory data from legacy Oracle on-prem servers to AWS GovCloud and
+                                Databricks Delta Lake Platform
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Architected key data ingestion validation workflows in Databricks using Python and
+                                PostgreSQL, decreasing manual deployment verification time by over 40 hours per monthly
+                                release
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Spearheaded development of comprehensive data dictionary handling 16,500+ columns across
+                                1,500 tables, significantly reducing data ingestion errors
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Established weekly data science learning sessions fostering cross-team collaboration and
+                                accelerating adoption of AI through topics such as federated learning and modern data
+                                engineering architectures
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">January 2024 – Present</span></div>
+                </div>
+
+                <!-- Daybreak LLC / FDA -->
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Senior Data Scientist</h3>
-                        <div class="subheading mb-3">Daybreak LLC • FDA</div>
-                        <p>Synthesize eCommerce data to identify vulnerabilities threatening supply chain resiliency in
-                            the U.S. healthcare system. Create and tune machine learning models to augment existing
-                            fraud prevention architectures, perform anomaly detection, and identify key areas for data
-                            quality improvement.</p>
+                        <div class="subheading mb-3">Daybreak, LLC / U.S. Food and Drug Administration (FDA)</div>
+                        <p>
+                            Led a team of four data scientists within the FDA Center for Devices and Radiological Health
+                            Product Authentication Program.
+                            Synthesized eCommerce data using Python, SQL and Tableau to identify vulnerabilities
+                            threatening healthcare supply chain resiliency.
+                        </p>
+                        <ul class="fa-ul mb-0">
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Piloted anomaly detection initiative focused on identifying illegitimate products at
+                                FDA, guiding the project through its entire lifecycle, from initial requirements
+                                gathering from SMEs to development in Python and visualizing findings in Tableau
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Created, optimized, and measured KPIs for machine learning model designed to augment
+                                existing FDA import screening systems, resulting in a projected 33% reduction in hourly
+                                manual reviews
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Led the development and implementation of numerous user-facing solutions in Tableau,
+                                allowing for quick internal review of millions of medical device records by FDA SMEs
+                                across shortage prevention and illegitimate product detection efforts
+                            </li>
+                        </ul>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">June 2022 - Present</span></div>
+                    <div class="flex-shrink-0"><span class="text-primary">June 2022 – December 2023</span></div>
                 </div>
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Data Scientist</h3>
-                        <div class="subheading mb-3">Daybreak LLC • FDA</div>
-                        <p>Solved problems using data science in the national security, public health and public safety
-                            sectors of government.</p>
+                        <div class="subheading mb-3">Daybreak, LLC / U.S. Food and Drug Administration (FDA)</div>
+                        <ul class="fa-ul mb-0">
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Streamlined flight trajectories for government aircraft by leveraging a faster-RNN deep
+                                learning pipeline in Python, automating the categorization of millions of vertical
+                                obstructions across dozens of distinct object classes in satellite imagery
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Generated geospatial layers encompassing key environmental factors using Python,
+                                PostGIS, and QGIS to aid search and rescue teams in discerning relevant terrain for
+                                dozens of missing person investigations
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Designed and optimized PostgreSQL queries to efficiently retrieve big data from AWS RDS
+                                and S3 and analyze in scalable EC2 instances, enhancing query performance through
+                                optimized indexing strategies
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Designed company interview framework for all new data science applicants and conducted
+                                interviews to assess candidates' suitability for data scientist and senior data
+                                scientist roles
+                            </li>
+                        </ul>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">July 2021 - June 2022</span></div>
+                    <div class="flex-shrink-0"><span class="text-primary">July 2021 – June 2022</span></div>
                 </div>
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Course Grader</h3>
-                        <div class="subheading mb-3">UVA School of Data Science</div>
-                        <p>Graded and mentored students in <i>Practice & Applications of Data Science in Python</i> at
-                            UVA.</p>
+                        <div class="subheading mb-3">University of Virginia, School of Data Science</div>
+                        <ul class="fa-ul mb-0">
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Provided detailed feedback and mentorship to graduate students in <i>Practice &
+                                    Applications of Data Science in Python</i>
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Evaluated student projects focusing on data manipulation, visualization, and machine
+                                learning implementations
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Held office hours to assist students with Python programming concepts and data science
+                                best practices
+                            </li>
+                        </ul>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">June 2021 - Aug 2021</span></div>
+                    <div class="flex-shrink-0"><span class="text-primary">June 2021 – August 2021</span></div>
                 </div>
+
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Data Visualization Consultant</h3>
                         <div class="subheading mb-3">Clark Data Labs</div>
-                        <p>Consulted on interactive data visualization, UI/UX design, website creation, and geospatial
-                            visualization.</p>
+                        <ul class="fa-ul mb-0">
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Developed interactive data visualizations and dashboards using D3.js and Tableau
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Created user-friendly interfaces for data exploration and analysis tools
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Implemented geospatial visualizations for location-based data analysis projects
+                            </li>
+                        </ul>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">Oct 2019 - April 2020</span></div>
+                    <div class="flex-shrink-0"><span class="text-primary">October 2019 – April 2020</span></div>
                 </div>
+
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Research Assistant</h3>
-                        <div class="subheading mb-3">University of Michigan Economics Department</div>
-                        <p>Performed data cleaning, entry, and tabulation in Excel, R, and Stata for economists.</p>
+                        <div class="subheading mb-3">University of Michigan, Department of Economics</div>
+                        <ul class="fa-ul mb-0">
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Conducted data cleaning and analysis using R, Excel, and Stata for economic research
+                                projects
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Assisted professors with literature reviews and data collection for academic
+                                publications
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Created reproducible data processing pipelines for research datasets
+                            </li>
+                        </ul>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">Oct 2017 - Dec 2019</span></div>
+                    <div class="flex-shrink-0"><span class="text-primary">October 2017 – December 2019</span></div>
                 </div>
             </div>
         </section>
@@ -153,6 +408,10 @@
                         <div class="subheading mb-3">Bachelor of Science in Economics (High Honors)</div>
                         <p>
                             Minor in Mathematics
+                            <br>
+                            Honors Thesis: <a
+                                href="https://github.com/amawest/TRIPS-Agreement-Economic-Development"><i>How Has the
+                                    TRIPS Agreement Affected Intellectual Property Adherence?</i></a>
                             <br>
                             Coursework: Intermediate Econometrics I & II, Linear Algebra, Calculus I-IV, Probability,
                             Public Finance
@@ -193,35 +452,168 @@
                     <li class="list-inline-item"><i class="fab fa-markdown"></i></li>
                     <li class="list-inline-item"><i class="fab fa-trello"></i></li>
                     <li class="list-inline-item"><i class="fa fa-file-excel"></i></li>
-
                 </ul>
-                <div class="subheading mb-3">Projects</div>
+
+                <div class="subheading mb-3">Technical Skills</div>
                 <ul class="fa-ul mb-0">
                     <li>
-                        <a href="https://ieeexplore.ieee.org/document/9483781"><span class="fa-li"><i
-                                    class="fas fa-link"></i></span></a>
-                        <i>Data Schema to Formalize Education R&D Using Natural-Language Processing</i>
+                        <span class="fa-li"><i class="fas fa-laptop-code"></i></span>
+                        Tools: Python, SQL, AWS, Databricks, Cursor, Git, Bash, Excel, Tableau, QGIS, R, LaTeX, HTML,
+                        CSS
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-brain"></i></span>
+                        Topics: AI/ML, LLMs, Data Engineering, Natural-Language Processing, Deep Learning, Statistics,
+                        Data
+                        Visualization
+                    </li>
+                </ul>
 
+                <div class="subheading mb-3 mt-4">Certifications & Professional Development</div>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-certificate"></i></span>
+                        Databricks Generative AI Engineer Associate (March 2025)
                     </li>
                     <li>
-                        <a href="https://github.com/amawest/chronic-wasting-disease-with-neural-networks"><span
-                                class="fa-li"><i class="fas fa-link"></i></span></a>
-                        <i>Predicting Chronic Wasting Disease in White-Tailed Deer using Neural Networks</i>
+                        <span class="fa-li"><i class="fas fa-certificate"></i></span>
+                        Databricks Data Engineer Associate (December 2024)
                     </li>
                     <li>
-                        <a href="https://github.com/amawest/criminal-expungement-data-analysis"><span class="fa-li"><i
-                                    class="fas fa-link"></i></span></a>
-                        <i>Understanding Racial Disparity In The Virginia Court System</i>
+                        <span class="fa-li"><i class="fas fa-certificate"></i></span>
+                        Artificial Intelligence Engineer Expert, Booz Allen Hamilton (November 2024)
+                    </li>
+                </ul>
+
+                <div class="subheading mb-3 mt-4">Technical Writing</div>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-pen"></i></span>
+                        Writer for Medium's Towards Data Science publication (2020-2022)
                     </li>
                     <li>
-                        <a href="https://github.com/amawest/Wine-Recommender-Algorithm"><span class="fa-li"><i
-                                    class="fas fa-link"></i></span></a>
-                        <i>Wine Recommender Algorithm Using Text Analytics</i>
+                        <span class="fa-li"><i class="fas fa-star"></i></span>
+                        Over 100,000 views across technical articles
                     </li>
                     <li>
-                        <a href="https://github.com/amawest/TRIPS-Agreement-Economic-Development"><span class="fa-li"><i
-                                    class="fas fa-link"></i></span></a>
-                        <i>How Has the TRIPS Agreement Affected Intellectual Property Adherence?</i>
+                        <span class="fa-li"><i class="fas fa-link"></i></span>
+                        Portfolio: <a href="https://amawest.medium.com/" target="_blank"
+                            rel="noopener noreferrer">amawest.medium.com</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Volunteer Experience -->
+        <section class="resume-section" id="volunteer">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Volunteer Experience</h2>
+                <ul class="fa-ul mb-0">
+                    <li class="mb-5">
+                        <span class="fa-li"><i class="fas fa-brain"></i></span>
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">InnovateEDU</h3>
+                            <div class="subheading mb-3">Data Schema to Formalize Education R&D Using Natural-Language
+                                Processing</div>
+                            <p>
+                            <ul class="fa-ul mb-0 mt-2">
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                    Published research: <a href="https://ieeexplore.ieee.org/document/9483781"><i>Data
+                                            Schema to Formalize Education R&D Using Natural-Language Processing</i></a>
+                                </li>
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                    Explored underlying structural differences in educational interventions using topic
+                                    modeling and latent Dirichlet allocation
+                                </li>
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                    Collected and cleaned data from 100,000+ research articles using the ERIC API and
+                                    processed results in Amazon SageMaker
+                                </li>
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                    Followed Agile methodology to meet objectives on time and presented deliverables to
+                                    stakeholders at the end of each sprint
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="text-primary">August 2020 - May 2021</div>
+                    </li>
+                    <li class="mb-5">
+                        <span class="fa-li"><i class="fas fa-paw"></i></span>
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Virginia Department of Wildlife</h3>
+                            <div class="subheading mb-3">Predicting Chronic Wasting Disease in White-Tailed Deer using
+                                Neural Networks</div>
+                            <p>
+                            <ul class="fa-ul mb-0 mt-2">
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                    Project: <a
+                                        href="https://github.com/amawest/chronic-wasting-disease-with-neural-networks"><i>Predicting
+                                            Chronic Wasting Disease in White-Tailed Deer using Neural Networks</i></a>
+                                </li>
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                    Tuned neural networks (ANN, CNN-LSTM) in Python while holding logistic regression
+                                    with downsampling as a baseline
+                                </li>
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                    Visualized data in R to model migratory paths of deer in Virginia and identify
+                                    counties most at risk of chronic wasting disease
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="text-primary">February 2021 - May 2021</div>
+                    </li>
+                    <li class="mb-5">
+                        <span class="fa-li"><i class="fas fa-hands-helping"></i></span>
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Code for Charlottesville</h3>
+                            <div class="subheading mb-3">Understanding Racial Disparities In The Virginia Court System
+                            </div>
+                            <p>
+                            <ul class="fa-ul mb-0 mt-2">
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                    Project: <a
+                                        href="https://github.com/amawest/criminal-expungement-data-analysis"><i>Understanding
+                                            Racial Disparity In The Virginia Court System</i></a>
+                                </li>
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                    Utilized PySpark's SQL and ML functionalities to calculate the predicted likelihood
+                                    of being charged with a crime in Virginia for the Legal Aid Justice Center
+                                </li>
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                    Created interactive dashboard in Tableau to display which Virginia subpopulations
+                                    experienced the largest racial disparities
+                                </li>
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                    Presented findings and obtained feedback from stakeholders at the Legal Aid Justice
+                                    Center and Code for Charlottesville
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="text-primary">February 2021 - June 2021</div>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-users"></i></span>
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">MSDS Student Council President</h3>
+                            <div class="subheading mb-3">University of Virginia</div>
+                            <p>Class President of 72-Member Data Science Graduate Cohort. Led student initiatives and
+                                organized community service activities.</p>
+                        </div>
+                        <div class="text-primary">October 2020 - May 2021</div>
                     </li>
                 </ul>
             </div>
@@ -232,13 +624,33 @@
             <div class="resume-section-content">
                 <h2 class="mb-5">Interests</h2>
                 <p>
-                    Apart from being a data scientist, I like to enjoy all Colorado has to offer in the great outdoors.
-                    In the winter, I am an avid skier and powerlifter. During the warmer months, I enjoy hiking,
-                    camping, and sipping coffee in the crisp morning air. I try to absorb a new book or two a month and in turn my favorite topics to write about are data
-                    science and travel. </p>
-
-                <p class="mb-0">
+                    Besides learning all things data science and AI, I am a big fan of my adopted state of Colorado and
+                    love any opportunity to explore the nearby mountains.
+                    In the winter, I am an avid skier. During the warmer months, I enjoy hiking,
+                    camping, and most recently, running (as I had previously decided running "just wasn't my thing",
+                    this came as a big surprise). I try to absorb a new book or two a month, usually via audiobook, and
+                    so if you have any life-changing self-help or fantasy novel recommendations
+                    please send them my way!
+                    <br><br>
+                    In general, I think the hobbits know how to enjoy life and try to take
+                    direction from them. :)
                 </p>
+                <br><br>
+
+                <div class="photo-gallery">
+                    <div class="photo-item">
+                        <img src="assets/img/colorado-mountain.png" alt="Colorado Mountain View">
+                        <div class="photo-caption">Breathtaking views of the Rocky Mountains</div>
+                    </div>
+                    <div class="photo-item">
+                        <img src="assets/img/skiing.jpg" alt="Skiing in Colorado">
+                        <div class="photo-caption">Winter adventures in the Colorado Rockies</div>
+                    </div>
+                    <div class="photo-item">
+                        <img src="assets/img/china-temple.jpg" alt="Temple in China">
+                        <div class="photo-caption">Exploring ancient temples in Beijing</div>
+                    </div>
+                </div>
             </div>
         </section>
         <hr class="m-0" />
@@ -246,56 +658,132 @@
         <section class="resume-section" id="achievements">
             <div class="resume-section-content">
                 <h2 class="mb-5">Achievements</h2>
+
+                <!-- Publications -->
+                <div class="subheading mb-3">Publications & Research</div>
                 <ul class="fa-ul mb-0">
                     <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                        <span class="fa-li"><i class="fas fa-book"></i></span>
+                        Coauthor, <i>Data Schema to Formalize Education Research & Development Using Natural Language
+                            Processing</i>, published in IEEE 2021
+                    </li>
+                </ul>
+
+                <!-- Speaking Engagements -->
+                <div class="subheading mb-3 mt-4">Speaking Engagements</div>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-microphone"></i></span>
                         Presenter, <i>Mapping the Flow of Products Through the E-Commerce Supply Chain</i>, INFORMS
                         Business Analytics Conference 2023
                     </li>
                     <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        Panelist, Women in Data Science Charlottesville 2022
+                        <span class="fa-li"><i class="fas fa-users"></i></span>
+                        Panelist, Women in Data Science (WiDS) Charlottesville 2022
                     </li>
+                </ul>
+
+                <!-- Academic Honors -->
+                <div class="subheading mb-3 mt-4">Academic Honors</div>
+                <ul class="fa-ul mb-0">
                     <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        Coauthor, <i>Data Schema to Formalize Education Research & Development Using Natural Language
-                            Processing</i>, published in IEEE 2021
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                        <span class="fa-li"><i class="fas fa-graduation-cap"></i></span>
                         Class President, UVA School of Data Science Residential Student Council
                     </li>
                     <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        2<sup>nd</sup>
-                        Place, University of Chicago Econometrics Competition 2019
+                        <span class="fa-li"><i class="fas fa-award"></i></span>
+                        2<sup>nd</sup> Place, University of Chicago Econometrics Competition 2019
                     </li>
                     <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                        <span class="fa-li"><i class="fas fa-globe-americas"></i></span>
                         Recipient, Department of State Benjamin A. Gilman Scholar 2018
                     </li>
+                </ul>
+
+                <!-- Athletic Achievements -->
+                <div class="subheading mb-3 mt-4">Athletic Achievements</div>
+                <ul class="fa-ul mb-0">
                     <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        1<sup>st</sup>
-                        Place, Collegiate National Taekwondo Championships 2017, 2018, 2019
+                        <span class="fa-li"><i class="fas fa-award"></i></span>
+                        1<sup>st</sup> Place, Inaugural World University Games held in Muju, South Korea 2018
                     </li>
                     <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                        <span class="fa-li"><i class="fas fa-trophy"></i></span>
+                        1<sup>st</sup> Place, Collegiate National Taekwondo Championships 2017, 2018, 2019
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-star"></i></span>
                         All-American and Scholastic All-American, Collegiate National Taekwondo Association 2019
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        1<sup>st</sup>
-                        Place, Inaugural World University Games held in Muju, South Korea 2018
                     </li>
                 </ul>
             </div>
         </section>
+        <hr class="m-0" />
+        <!-- Credits -->
+        <section class="resume-section">
+            <div class="resume-section-content">
+                <p class="text-muted" style="font-size: 0.9rem; font-style: italic;">
+                    Credit: I used the <a href="https://github.com/startbootstrap/startbootstrap-resume"
+                        class="text-primary" style="text-decoration: none;">✨ Start Bootstrap Resume Theme ✨</a> by the
+                    talented David Miller, augmented by my own additions and Cursor. Thanks for reading!
+                </p>
+            </div>
+        </section>
     </div>
+
+    <!-- Modal for expanded images -->
+    <div class="modal" id="imageModal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img id="expandedImg" src="" alt="">
+            <div class="modal-caption"></div>
+        </div>
+    </div>
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+
+    <script>
+        // Get the modal
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('expandedImg');
+        const modalCaption = document.querySelector('.modal-caption');
+        const closeBtn = document.querySelector('.close-modal');
+
+        // Add click event to all photo items
+        document.querySelectorAll('.photo-item').forEach(item => {
+            item.addEventListener('click', function () {
+                const img = this.querySelector('img');
+                const caption = this.querySelector('.photo-caption').textContent;
+
+                modal.classList.add('active');
+                modalImg.src = img.src;
+                modalImg.alt = img.alt;
+                modalCaption.textContent = caption;
+            });
+        });
+
+        // Close modal when clicking the close button
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+
+        // Close modal with escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 
 </html>
